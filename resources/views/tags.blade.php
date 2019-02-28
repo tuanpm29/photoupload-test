@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="tag-list-header">
-    <h2>Available Tags</h2>
+    <h2>{{ __('view.tags') }}</h2>
 </div>
 <div id="list-tag">
 @foreach($tags as $tag)

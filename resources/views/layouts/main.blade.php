@@ -37,10 +37,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ $url['web']['upload'] }}">Upload</a>
+                            <a class="nav-link" href="{{ $url['web']['upload'] }}">{{ __('view.upload') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ $url['web']['tag'] }}">Tags</a>
+                            <a class="nav-link" href="{{ $url['web']['tag'] }}">{{ __('view.tags') }}</a>
                         </li>
                     </ul>
                 </div>

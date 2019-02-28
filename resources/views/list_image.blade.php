@@ -2,17 +2,13 @@
 
 @section('content')
 <div class="header">
-    <h2>Images for '{{ $tagName }}'</h2>
+    <h2>{{ __('view.image_for', ['tag' => $tagName]) }}</h2>
 </div>
 <div class="row" id="image-container">
-    <div class="column image-column">
-    </div>
-    <div class="column image-column">
-    </div>
-    <div class="column image-column">
-    </div>
-    <div class="column image-column">
-    </div>
+    <div class="column image-column"></div>
+    <div class="column image-column"></div>
+    <div class="column image-column"></div>
+    <div class="column image-column"></div>
 </div>
 <script>
 (function($){

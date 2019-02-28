@@ -6,6 +6,6 @@
 </div>
 <input type="file" style="display: none" id="files" />
 <div class="drop-file-text">
-    <span id="status-text">Drop your photo here</span>
+    <span id="status-text">{{ __('view.drop_photo') }}</span>
 </div>
 @endsection
