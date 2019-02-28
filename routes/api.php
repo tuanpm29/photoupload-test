@@ -17,6 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::group( ['namespace' => 'API'], function() {
-    Route::get('upload', ['uses' => 'ImageController@upload']);
-    Route::post('upload', ['uses' => 'ImageController@upload']);
+    Route::post('/upload', ['uses' => 'ImageController@upload', 'as' => 'api.upload']);
+    Route::post('/tag/bind', ['uses' => 'TagController@bind', 'as' => 'api.tag.bind']);
 });
