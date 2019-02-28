@@ -7,8 +7,93 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~jquery-tageditor/jquery.tag-editor';
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* uploader */
+.body {
+  #uploader {
+    display: block;
+    width: 300px;
+    height: 300px;
+    border: 10px dashed #aaaaaa;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  #uploader.hover, #uploader.hover * {
+    border-color: #0c0;
+    color: #0c0;
+  }
+  #plus {
+    margin: 93px 0;
+    text-align: center;
+    color: #AAA;
+    font-size: 70px;
+  }
+  .drop-file-text {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #888;
+    text-align: center;
+    font-size: 26px;
+  }
+  .upload-url {
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+  }
+}
+
+/* image viewer */
+.body {
+  img {
+    width: 100%;
+  }
+}
+
+/* tag list */
+.body {
+  a.badge {
+    font-size: 14px;
+  }
+}
+
+/* image list */
+.body {
+  #image-container {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
