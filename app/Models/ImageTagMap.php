@@ -9,5 +9,5 @@ class ImageTagMap extends Model
 {
     public $table = 'image_tag';
 
-    public $fillable = ['tag_id', 'image_id'];
+    protected $fillable = ['tag_id', 'image_id'];
 }

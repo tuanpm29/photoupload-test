@@ -9,5 +9,5 @@ class Image extends Model
 {
     public $table = 'images';
 
-    public $fillable = ['string_id', 'local_path', 'remote_path'];
+    protected $fillable = ['string_id', 'local_path', 'remote_path'];
 }

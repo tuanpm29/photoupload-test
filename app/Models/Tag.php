@@ -9,5 +9,5 @@ class Tag extends Model
 {
     public $table = 'tags';
 
-    public $fillable = ['tag_name'];
+    protected $fillable = ['tag_name'];
 }
