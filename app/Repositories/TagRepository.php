@@ -4,9 +4,13 @@ namespace App\Repositories;
 
 
 use App\Models\Tag;
+use Illuminate\Support\Collection;
 
 class TagRepository extends AbstractRepository
 {
+    public function all() {
+        return Tag::all();
+    }
 
     public function create($data)
     {
@@ -18,7 +22,17 @@ class TagRepository extends AbstractRepository
         return Tag::where('tag_name', $tagName)->first();
     }
 
-    public function firstOrCreate($tagName) {
-        return Tag::firstOrCreate(['tag_name' => $tagName]);
+    public function firstOrCreate($data) {
+        return Tag::firstOrCreate($data);
+    }
+
+    public function getOrCreate(Collection $tagNames) {
+        $tagModelCollection = collect([]);
+
+        foreach($tagNames as $key => $value) {
+            $tagModelCollection->add($this->firstOrCreate(['tag_name' => $value]));
+        }
+
+        return $tagModelCollection;
     }
 }

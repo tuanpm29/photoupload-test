@@ -15,9 +15,9 @@ class ImageRepository extends AbstractRepository
         return $newImage;
     }
 
-    public function find($id)
+    public function find($stringId)
     {
-
+        return Image::where('string_id', $stringId)->first();
     }
 
     public function getAvailableStringId() {
